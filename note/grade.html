@@ -11,7 +11,23 @@
     let eng = Number(prompt("수학", "점수를 입력하시오"));
     let math = Number(prompt("영어", "점수를 입력하시오"));
 
+    let total = kor + eng + math;
+    let avg = total / 3.0;
 
+    window.document.write("총점 : " + total + "<br>");
+    window.document.write("평균 : " + avg + "<br>");
+
+    if(avg >= 90){
+        window.document.write("성적은 수입니다.");
+    }else if(avg >= 80){
+        window.document.write("성적은 우입니다.");
+    }else if(avg >= 70){
+        window.document.write("성적은 미입니다.");
+    }else if(avg >= 60){
+        window.document.write("성적은 양입니다.");
+    }else {
+        window.document.write("성적은 가입니다.");
+    }
 
 </script>
 
