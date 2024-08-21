@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let kor = Number(prompt("국어", "점수를 입력하시오"));
+    let eng = Number(prompt("수학", "점수를 입력하시오"));
+    let math = Number(prompt("영어", "점수를 입력하시오"));
+
+    const total = function (kor, eng, math) {
+        return (kor + eng + math);
+    }
+
+    const avg = function (kor, eng, math) {
+        return total(kor, eng, math) / 3.0;
+    }
+
+    const grade = function (kor, eng, math) {
+
+        if (avg(kor, eng, math) >= 90) {
+            return "수";
+        } else if (avg(kor, eng, math) >= 80) {
+            return "우";
+        } else if (avg(kor, eng, math) >= 70) {
+            return "미";
+        } else if (avg(kor, eng, math) >= 60) {
+            return "양";
+        } else {
+            return "가";
+        }
+
+    }
+
+    window.document.write("총점 : " + total(kor, eng, math) + "<br>");
+    window.document.write("평균 : " + avg(kor, eng, math) + "<br>");
+    window.document.write("성적은 " + grade(kor, eng, math) + "입니다. <br>");
+
+</script>
+
+
+
+<body>
+
+</body>
+
+</html>
