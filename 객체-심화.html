@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //생성자 함수 만드는법
+        function Airplane(name, color, speed){
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.fly = function(){
+                return this.speed + "fly!!";
+            }
+        };
+        
+
+        let voing747 = new Airplane("보잉747", "흰색", "600km/h");
+
+        document.write(voing747.fly() + "<br>");
+        console.log(voing747);
+        document.write(typeof(voing747) + "<br>");
+        document.write(typeof(Airplane) + "<br>");
+        document.write(Airplane("보잉747", "흰색", "600km/h") + "<br>");
+
+    </script>
+    <script>
+        let intArr = new Array();
+        intArr[0] = 1;
+        intArr[1] = 1;
+
+        for(let i=0; i < intArr.length; i++){
+            document.write(intArr[i] + "<br>");
+        }
+
+        let date = new Date();
+        document.write(date.getDay() + "<br>");
+        document.write(date.getHours() + "<br>");
+        document.write(date.getMinutes() + "<br>");
+
+    </script>
+
+    <script>
+        function createCar(name, color, speed){
+            let carObj = {
+                name : name,
+                color : color,
+                speed : speed,
+                run : function(){
+                    return this.speed + "km/h"
+                }
+            }
+            return carObj;
+        };
+
+        let car = createCar("소나타", "그레이", 220);
+
+        document.write(car.name + "<br>");
+        document.write(car.color + "<br>");
+        document.write(car.run() + "<br>");
+
+        car = createCar("그렌져", "빨강", 500);
+
+        document.write(car.name + "<br>");
+        document.write(car.color + "<br>");
+        document.write(car.run() + "<br>");
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
