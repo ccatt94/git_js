@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.onload = function () {
+
+            let img = document.createElement("img")
+            img.setAttribute("src", 'https://www.wfla.com/wp-content/uploads/sites/71/2023/05/GettyImages-1389862392.jpg?w=2560&h=1440&crop=1');
+            img.setAttribute("width", 170);
+            img.setAttribute("height", 67);
+
+            document.body.appendChild(img);
+
+            //위 이미지 덮어씀
+            var str = "";
+            str += "<p> javascript & node.js </p>";
+            str += " <img src='./img/logo.png', ";
+            str += " width='170', height='67', tempData='logoImg'> ";
+
+            document.body.innerHTML = str;
+
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
