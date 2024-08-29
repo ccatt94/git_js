@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+< lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    window.onload = function(){
+
+        let v1 = document.querySelector("#v1")
+        let v2 = document.querySelector("#v2")
+        
+        let result = document.querySelector("#result")
+
+        resultBtn.addEventListener("click", function(){
+
+            result.value = Number(v1.value) + Number(v2.value)
+
+        })
+        
+    }
+
+</script>
+
+<script>
+
+    function total(){
+
+        let cost = document.getElementById("cost").value
+        let quantity = document.getElementById("quantity").value
+
+        document.getElementById("total").innerHTML = cost * quantity
+    }
+
+</script>
+
+<body>
+        <h1>+연산</h1>
+
+        <input id="v1" type="text" name="v1" value="">+
+        <input id="v2" type="text" name="v2" value="">=
+        <input id="result" type="text" name="result" value="">
+        <input type="button" id="resultBtn" value="연산">
+
+
+        <h1>총합 구하기</h1>
+
+        가격<input id="cost" type="text" name="cost" value="2500">X 
+        수량<select id="quantity" onchange="total()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        총합: <span id="total"></span>
+
+
+</body>
+
+</html>

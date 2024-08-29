@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+
+        function change(){
+            let text = document.querySelector("#areaBoard").value
+
+            document.querySelector("#result").innerHTML = text.length
+        
+        }
+
+
+
+</script>
+
+<body>
+
+    글자수 세기<br>
+    <textarea id="areaBoard" rows="10" cols="10" onkeydown="change()"></textarea><br>
+    입력문자수 : <span id="result"></span>
+
+</body>
+
+</html>

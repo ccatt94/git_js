@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    window.onload = function(){
+
+        let lf = document.querySelector("#loginForm");
+        lf.onsubmit = function(){
+
+            if(document.querySelector("#uId").value == ""){
+                alert("아이디를 입력하세요");
+                console.log("아이디를 입력하지않음");
+                return false;
+            }else if(document.getElementById("uPw").value == ""){
+                alert("비밀번호를 입력하세요");
+                console.log("비밀번호를 입력하지 않음");
+                return false;
+            }else {
+                alert("로그인 ok");
+                console.log("로그인 성공");
+                return true;
+            }
+
+        }
+
+    }
+
+</script>
+
+<body>
+
+    <form id="loginForm" action="http://www.google.com">
+        USER ID : <input id="uId" type="text" name="uId"><br>
+        USER PW : <input id="uPw" type="password" name="upw"><br>
+        <input id="sbmBtn" type="submit" value="SUBMIT">
+        <input id="resBtn" type="reset" value="RESET">
+    </form>
+
+</body>
+
+</html>
