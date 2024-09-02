@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            
+            
+            //값 가져오는 함수
+            //$("#uId").val()
+            //$("#uId").val('값')
+            
+            //jQuery 특징 - 함수를 통해 값을 넣고 뺌
+            
+            $("#sbmBtn").click(function(){
+                
+                if($("#uId").val() === ""){
+                    alert("유저이름을 넣으세요");
+                }else if($("#uPw").val() === ""){
+                    alert("비밀번호를 넣으세요");
+                }else{
+                    alert("로그인 OK");
+                    $("#loginForm").submit();
+                }
+            });
+            
+        });
+        
+        $(document).ready(function () {
+            
+            $("#loginForm2").submit(function(event){
+                
+                //event.preventDefault() -> 정해진 기본 동작을 행하지 않음
+                
+                if($("#uId").val() === ""){
+                    alert("유저이름을 넣으세요");
+                    event.preventDefault();
+                    
+                }else if($("#uPw").val() === ""){
+                    alert("비밀번호를 넣으세요");
+                    event.preventDefault();
+                    
+                }else{
+                    alert("로그인 OK");
+                }
+                
+                
+            });
+            
+        });
+        
+        $(document).ready(function () {
+            
+            $("#link").click(function(e){
+
+                e.preventDefault();
+                console.log("백날 클릭해도 구글 사이트로 안넘어가지롱")
+
+            });
+
+        })
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <a id="link" href="http://www.google.com">구글</a>
+    <hr>
+    <form id="loginForm" action="http://www.google.com">
+        USER ID : <input id="uId" type="text" name="uId"><br>
+        USER PW : <input id="uPw" type="password" name="upw"><br>
+        <input id="sbmBtn" type="button" value="SUBMIT">
+        <input id="resBtn" type="button" value="RESET">
+    </form>
+    <hr>
+    <form id="loginForm2" action="http://www.google.com">
+        USER ID : <input id="uId" type="text" name="uId"><br>
+        USER PW : <input id="uPw" type="password" name="upw"><br>
+        <input id="sbmBtn" type="submit" value="SUBMIT">
+        <input id="resBtn" type="reset" value="RESET">
+    </form>
+
+</body>
+
+</html>
